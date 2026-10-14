@@ -1,0 +1,28 @@
+import datetime
+import webbrowser
+
+print("Hello i'm your virtual  assistant")
+
+while True :
+    cmd = input("\nHi. How may i help you?").lower()
+
+    if "hello" in cmd or "hi" in cmd :
+        print("Hello Saran. How are you?")
+    elif "time" in cmd :
+        time = datetime.datetime.now().strftime("%I:%M %p")
+        print("Current time is", time)
+    elif "date" in cmd :
+        date = datetime.datetime.now().strftime("%d-%m-%Y")
+        print("Today is", date)
+    elif "open google" in cmd :
+        webbrowser.open("https://www.google.com")
+        print("Opening Google")
+    elif "your name" in cmd :
+        print("I am your python virtual assistant")
+    elif "exit" in cmd :
+        print("Good bye. Have a nice day")
+        break
+    else :
+        print("Sorry i dont understand the command")
+        
+    
